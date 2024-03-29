@@ -1,10 +1,11 @@
 pipeline {
     agent any
     environment {
-       tgBot_id = credentials('vpn_bot_id')
-       my_chat_id = credentials('my_chat_id')
-       PAYMENT_TOKEN = credentials('PAYMENT_TOKEN')
-       FINLAND_1_API_URL = credentials('FINLAND_1_API_URL')
+       tgBot_id = credentials('recipeBot_id')
+       recipeBot_postgres_pass = credentials('recipeBot_postgres_pass')
+       recipeBot_postgres_login = credentials('recipeBot_postgres_login')
+       db_location = credentials('db_location')
+       CHAT_ID = credentials('my_chat_id')
     }
     options {
         retry(3) 
